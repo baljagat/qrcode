@@ -28,12 +28,11 @@ function startScan() {
 
     cordova.plugins.barcodeScanner.scan(
         function (result) {
-            var uri = document.getElementById('uri').value
-            location.href = uri + result.text;
+            var uri = document.getElementById('uri').value;
+            $('#results').load(uri);
         }, 
         function (error) {
             alert("Scanning failed: " + error);
         }
     );
-
 }
