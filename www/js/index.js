@@ -28,10 +28,7 @@ function startScan() {
 
     cordova.plugins.barcodeScanner.scan(
         function (result) {
-            var s = "Result: " + result.text + "<br/>" +
-            "Format: " + result.format + "<br/>" +
-            "Cancelled: " + result.cancelled;
-            resultDiv.innerHTML = s;
+            var url = "http://www.patientkaar.local/web/Patientkaart?id=" + result.text;
         }, 
         function (error) {
             alert("Scanning failed: " + error);
