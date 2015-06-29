@@ -28,7 +28,8 @@ function startScan() {
 
     cordova.plugins.barcodeScanner.scan(
         function (result) {
-            var url = "http://www.patientkaar.local/web/Patientkaart?id=" + result.text;
+            var uri = document.getElementById('uri').value
+            location.href = uri + result.text;
         }, 
         function (error) {
             alert("Scanning failed: " + error);
