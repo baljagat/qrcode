@@ -30,7 +30,7 @@ function startScan() {
         function (result) {
             var uri = document.getElementById('uri').value + result.text;
             //window.open(uri, '_self');
-            window.open('http://192.168.1.73:8080/web/Patientkaart?id=1', '_self');
+            window.open(result.text, '_self');
         }, 
         function (error) {
             alert("Scanning failed: " + error);
