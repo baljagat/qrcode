@@ -28,7 +28,7 @@ function startScan() {
 
     cordova.plugins.barcodeScanner.scan(
         function (result) {
-            var uri = document.getElementById('uri').value;
+            var uri = document.getElementById('uri').value + result.text;
             window.open(uri, '_self');
         }, 
         function (error) {
