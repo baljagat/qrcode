@@ -30,7 +30,8 @@ function startScan() {
         function (result) {
             var uri = document.getElementById('uri').value + result.text;
             alert("Opening URL: " + uri);
-            window.open(uri, '_self');
+            //window.open(uri, '_self');
+            $('#results').load(uri);
         }, 
         function (error) {
             alert("Scanning failed: " + error);
