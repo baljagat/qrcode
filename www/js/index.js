@@ -27,8 +27,6 @@ function startScan() {
 
     cordova.plugins.barcodeScanner.scan(
         function (result) {
-            alert('We have a result');
-            alert('Opening URL: ' + result.text);
             window.open(result.text, '_self');
         }, 
         function (error) {
